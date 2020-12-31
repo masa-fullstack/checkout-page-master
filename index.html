@@ -1,95 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
+<html lang="en" class="h-100">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
 
-    <link rel="icon" href="devchallenges.png" />
+		<!-- Material Design icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="styles.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+		<title>Checkout page master</title>
+	</head>
+	<body class="bg-light h-100">
+		<div class="container">
+			<div class="py-5">
+				<h2>Checkout</h2>
+			</div>
+			<form class="needs-validation">
+				<div class="row">
+					<!-- item information section -->
+					<div class="col-md-6 order-md-2 px-4 mb-5">
+						<ul class="list-group p-3">
+							<!-- item1 -->
+							<li class="list-group-item d-flex justify-content-center">
+								<div class="row">
+									<div class="col-6 img-box">
+										<img
+											src="images/photo1.png"
+											class="img-fluid rounded"
+											alt="bag"
+										/>
+									</div>
+									<div class="col-6">
+										<h6>Vintage Backbag</h6>
+										<small class="text-warning">$54.99</small>
+										<small class="text-muted"><s>$94.99</s></small>
+										<div class="input-group mt-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text">-</span>
+											</div>
+											<input
+												type="number"
+												class="form-control text-center item-num"
+												id="numItem1"
+												value="1"
+												required
+											/>
+											<div class="input-group-append">
+												<span class="input-group-text">+</span>
+											</div>
+											<div class="invalid-feedback">
+												The number of Vintage Backbag is required.
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- item2 -->
+							<li class="list-group-item d-flex justify-content-center">
+								<div class="row">
+									<div class="col-6 img-box">
+										<img
+											src="images/photo2.png"
+											class="img-fluid rounded"
+											alt="shoes"
+										/>
+									</div>
+									<div class="col-6">
+										<h6>Levi Shoes</h6>
+										<small class="text-warning">$74.99</small>
+										<small class="text-muted"><s>$124.99</s></small>
+										<div class="input-group mt-3">
+											<div class="input-group-prepend">
+												<span class="input-group-text">-</span>
+											</div>
+											<input
+												type="number"
+												class="form-control text-center item-num"
+												id="numItem2"
+												value="1"
+												required
+											/>
+											<div class="input-group-append">
+												<span class="input-group-text">+</span>
+											</div>
+											<div class="invalid-feedback">
+												The number of Levi Shoes is required.
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- shipping -->
+							<li
+								class="list-group-item d-flex justify-content-between mt-5 border-top"
+							>
+								<span>Shipping</span>
+								<strong>$19</strong>
+							</li>
+							<!-- total -->
+							<li
+								class="list-group-item d-flex justify-content-between border-top"
+							>
+								<span>Total</span>
+								<strong>$148.98</strong>
+							</li>
+						</ul>
+					</div>
 
-    <title>Devchallenges</title>
+					<!-- user information section -->
+					<div class="col-md-6 order-md-1 px-1">
+						<h5 class="mb-3">Contact information</h5>
+						<!-- email -->
+						<div class="mb-3">
+							<label for="email">Email</label>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"
+										><span class="material-icons">email</span></span
+									>
+								</div>
+								<input
+									type="email"
+									class="form-control"
+									id="email"
+									placeholder="Enter your email..."
+									value=""
+									required
+								/>
+								<div class="invalid-feedback">
+									Valid email address is required.
+								</div>
+							</div>
+						</div>
+						<!-- Phone -->
+						<div class="mb-3">
+							<label for="phone">Phone</label>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"
+										><span class="material-icons">phone</span></span
+									>
+								</div>
+								<input
+									type="phone"
+									class="form-control"
+									id="phone"
+									placeholder="Enter your phone..."
+									value=""
+									required
+								/>
+								<div class="invalid-feedback">
+									Valid phone number is required.
+								</div>
+							</div>
+						</div>
 
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
+						<h5 class="mt-5 mb-3">Shipping address</h5>
+						<!-- Full name -->
+						<div class="mb-3">
+							<label for="fullName">Full name</label>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"
+										><span class="material-icons">account_circle</span></span
+									>
+								</div>
+								<input
+									type="text"
+									class="form-control"
+									id="fullName"
+									placeholder="Your full name..."
+									value=""
+									required
+								/>
+								<div class="invalid-feedback">Valid full name is required.</div>
+							</div>
+						</div>
+						<!-- Address -->
+						<div class="mb-3">
+							<label for="address">Address</label>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"
+										><span class="material-icons">home</span></span
+									>
+								</div>
+								<input
+									type="text"
+									class="form-control"
+									id="address"
+									placeholder="Your address..."
+									required
+								/>
+								<div class="invalid-feedback">Your address is required.</div>
+							</div>
+						</div>
+						<!-- City -->
+						<div class="mb-3">
+							<label for="city">City</label>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"
+										><span class="material-icons">apartment</span></span
+									>
+								</div>
+								<input
+									type="text"
+									class="form-control"
+									id="city"
+									placeholder="Your city..."
+									required
+								/>
+								<div class="invalid-feedback">Your address is required.</div>
+							</div>
+						</div>
+						<!-- Country -->
+						<div class="row">
+							<div class="col-6 mb-3">
+								<label for="country">Country</label>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text" for="country">
+											<span class="material-icons">public</span>
+										</span>
+									</div>
+									<select class="custom-select d-block" id="country" required>
+										<option selected value="">Your country...</option>
+										<option value="1">Japan</option>
+										<option value="2">United Kingdom</option>
+										<option value="3">United States</option>
+									</select>
+									<div class="invalid-feedback">Your country is required.</div>
+								</div>
+							</div>
+							<!-- Postral code -->
+							<div class="col-6 mb-3">
+								<label for="postalCode">Postal code</label>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text"
+											><span class="material-icons">
+												markunread_mailbox
+											</span></span
+										>
+									</div>
+									<input
+										type="text"
+										class="form-control"
+										id="postalCode"
+										placeholder="Your postal code..."
+										required
+									/>
+									<div class="invalid-feedback">
+										Your postal code is required.
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- checkbox -->
+						<div class="custom-control custom-checkbox">
+							<input
+								type="checkbox"
+								class="custom-control-input"
+								id="save-info"
+							/>
+							<label class="custom-control-label" for="save-info"
+								>Save this information for next time</label
+							>
+						</div>
+						<!-- button -->
+						<button
+							class="btn btn-warning text-white btn-lg mt-3 float-right"
+							type="submit"
+						>
+							Continue
+						</button>
+					</div>
+				</div>
+			</form>
+			<footer class="mt-5 text-center">
+				<p class="py-2">masa @ DevChallenges.io</p>
+			</footer>
+		</div>
 
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
-  </body>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+			integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+			integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			$(document).ready(function () {
+				$("body").bootstrapMaterialDesign()
+			})
+		</script>
+	</body>
 </html>

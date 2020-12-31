@@ -1,0 +1,30 @@
+body {
+	font-family: Montserrat;
+}
+label {
+	font-size: 12px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+.list-group {
+	background-color: #f2f2f2;
+}
+.list-group-item {
+	background-color: #f2f2f2;
+	border: none;
+}
+.img-box {
+	max-width: 200px;
+}
+.item-num {
+	max-width: 60px;
+}
+.invalid-feedback {
+	width: 100%;
+}
